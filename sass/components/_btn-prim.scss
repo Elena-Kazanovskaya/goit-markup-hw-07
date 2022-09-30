@@ -1,0 +1,12 @@
+.button.primary {
+    color: var(--primary-white-color);
+    background-color: var(--accent-color);
+
+    transition: background-color var(--transition-duration-function);
+
+    &:hover,
+    &:focus {
+        color: var(--primary-white-color);
+        background-color: var(--primary-button-focus);
+        }
+}

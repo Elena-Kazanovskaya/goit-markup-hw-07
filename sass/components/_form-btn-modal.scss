@@ -8,12 +8,12 @@
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
     transition: background-color var(--transition-duration-function), box-shadow var(--transition-duration-function);
+
+    &:hover,
+    &:focus {
+        color: var(--primary-white-color);
+        background-color: var(--primary-button-focus);
+        }
 }
 
-.form-button:hover,
-.form-button:focus,
-.form-button-modal:hover,
-.form-button-modal:focus {
-    color: var(--primary-white-color);
-    background-color: var(--primary-button-focus);
-}
+
