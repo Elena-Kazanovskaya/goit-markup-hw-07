@@ -1,0 +1,61 @@
+.contacts {
+    display: flex;
+    margin-left: auto;
+
+}
+
+
+
+.contacts .item:not(:last-child) {
+    margin-right: 50px;
+}
+
+
+.contacts .link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    color: var(--primary-text-color);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+
+    transition: color var(--transition-duration-function);
+}
+
+.contacts .link.social {
+    color: var(--title-text-color);
+
+}
+
+.icon-mail {
+    fill: currentColor;
+    margin-right: 10px;
+}
+
+.icon-tel {
+    fill: currentColor;
+    margin-right: 10px;
+}
+
+.link.social {
+    display: flex;
+    align-items: center;
+}
+
+
+
+.contacts .link:focus,
+.contacts .link:hover {
+    color: var(--accent-color);
+    fill: var(--accent-color);
+}
+
+.contacts .link.current {
+    /* position: relative;
+    display: block; */
+    color: var(--accent-color);
+}
