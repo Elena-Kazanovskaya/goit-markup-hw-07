@@ -24,16 +24,16 @@
     .link.current {
         color: var(--accent-color);
         }
-    
-    & .item:not(:last-child) {
-        margin-right: 50px;
-        }
-    
+
     & .link:focus,
     & .link:hover {
         color: var(--accent-color);
         fill: var(--accent-color);
         }
+    & .item:not(:last-child) {
+        margin-right: 50px;
+        }
+   
 }
 
 

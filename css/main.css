@@ -138,12 +138,12 @@ ul {
 .contacts .link.current {
   color: var(--accent-color);
 }
-.contacts .item:not(:last-child) {
-  margin-right: 50px;
-}
 .contacts .link:focus, .contacts .link:hover {
   color: var(--accent-color);
   fill: var(--accent-color);
+}
+.contacts .item:not(:last-child) {
+  margin-right: 50px;
 }
 
 .icon-mail {
@@ -310,6 +310,11 @@ ul {
   border: 1px solid rgba(33, 33, 33, 0.2);
   transition: border var(--transition-duration-function);
 }
+.form-input:focus {
+  outline: none;
+  border-radius: 4px;
+  border: 1px solid var(--accent-color);
+}
 
 .modal-title {
   margin-bottom: 12px;
@@ -335,13 +340,6 @@ ul {
   transform: translateY(-50%);
   transition: fill var(--transition-duration-function);
 }
-
-.form-input:focus {
-  outline: none;
-  border-radius: 4px;
-  border: 1px solid var(--accent-color);
-}
-
 .form-input:focus ~ .form-icon {
   fill: var(--accent-color);
 }
@@ -357,13 +355,6 @@ ul {
   resize: none;
   transition: border var(--transition-duration-function);
 }
-
-.comment:focus {
-  outline: none;
-  border-radius: 4px;
-  border: 1px solid var(--accent-color);
-}
-
 .comment::placeholder {
   font-family: "Roboto";
   font-weight: 400;
@@ -371,6 +362,11 @@ ul {
   line-height: 1.17;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
+}
+.comment:focus {
+  outline: none;
+  border-radius: 4px;
+  border: 1px solid var(--accent-color);
 }
 
 .policy-label {
@@ -412,22 +408,19 @@ ul {
   border: 2px solid #212121;
   border-radius: 2px;
 }
-
-.checkbox-icon-own-on {
-  display: none;
-}
-
 .checkbox-input:checked + .checkbox-icon-on {
   background-color: var(--primary-button-focus);
   border-color: var(--primary-button-focus);
 }
-
-.checkbox-input:checked + .checkbox-icon-on .checkbox-icon-own-on {
-  display: block;
-}
-
 .checkbox-input:focus + .checkbox-icon-on {
   border-color: var(--primary-button-focus);
+}
+
+.checkbox-icon-own-on {
+  display: none;
+}
+.checkbox-input:checked + .checkbox-icon-on .checkbox-icon-own-on {
+  display: block;
 }
 
 .footer-form {
@@ -754,12 +747,6 @@ ul {
   flex-wrap: wrap;
   gap: 30px;
 }
-
-.work-list a {
-  display: block;
-  transition: box-shadow var(--transition-duration-function);
-}
-
 .work-list .title {
   margin-bottom: 4px;
   color: var(--primary-text-color);
@@ -768,16 +755,19 @@ ul {
   line-height: 2;
   text-decoration: none;
 }
-
 .work-list .text {
   color: var(--title-text-color);
   font-size: 16px;
   line-height: 1.88;
   text-decoration: none;
 }
-
 .work-list .card {
   flex-basis: calc((100% - 60px) / 3);
+}
+
+.work-list a {
+  display: block;
+  transition: box-shadow var(--transition-duration-function);
 }
 
 .work-card {
@@ -824,9 +814,7 @@ ul {
   transform: translateY(101%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-a:hover .text-overlay,
-a:focus .text-overlay {
+a:hover .text-overlay, a:focus .text-overlay {
   transform: translateY(0);
 }
 

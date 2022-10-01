@@ -7,7 +7,6 @@
     position: relative;
     display: block;
     margin-bottom: 10px;
-
 }
 
 .form-lable {
@@ -20,7 +19,6 @@
     line-height: 1.17;
     letter-spacing: 0.01em;
     color: #757575;
-
 }
 
 .form-input {
@@ -36,6 +34,11 @@
 
     transition: border var(--transition-duration-function);
 
+    &:focus {
+        outline: none;
+        border-radius: 4px;
+        border: 1px solid var(--accent-color);
+        }
 }
 
 .modal-title {
@@ -65,17 +68,9 @@
 
     transition: fill var(--transition-duration-function);
 
-}
-
-.form-input:focus {
-    outline: none;
-    border-radius: 4px;
-    border: 1px solid var(--accent-color);
-}
-
-
-.form-input:focus~.form-icon {
-    fill: var(--accent-color);
+    .form-input:focus~& {
+        fill: var(--accent-color);
+        }
 }
 
 .comment {
@@ -89,21 +84,20 @@
     resize: none;
 
     transition: border var(--transition-duration-function);
-}
 
-.comment:focus {
-    outline: none;
-    border-radius: 4px;
-    border: 1px solid var(--accent-color);
-}
-
-.comment::placeholder {
-    font-family: 'Roboto';
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 1.17;
-    letter-spacing: 0.01em;
-    color: rgba(117, 117, 117, 0.5);
+    &::placeholder {
+        font-family: 'Roboto';
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 1.17;
+        letter-spacing: 0.01em;
+        color: rgba(117, 117, 117, 0.5);
+        }
+    &:focus {
+        outline: none;
+        border-radius: 4px;
+        border: 1px solid var(--accent-color);
+        }
 }
 
 .policy-label {
@@ -145,21 +139,25 @@
     border: 2px solid #212121;
     border-radius: 2px;
 
+    .checkbox-input:checked+& {
+        background-color: var(--primary-button-focus);
+        border-color: var(--primary-button-focus);
+        }
+
+    .checkbox-input:focus+& {
+        border-color: var(--primary-button-focus);
+        }
 }
 
 .checkbox-icon-own-on {
     display: none;
+
+    .checkbox-input:checked+.checkbox-icon-on & {
+        display: block;
+        }
 }
 
-.checkbox-input:checked+.checkbox-icon-on {
-    background-color: var(--primary-button-focus);
-    border-color: var(--primary-button-focus);
-}
 
-.checkbox-input:checked+.checkbox-icon-on .checkbox-icon-own-on {
-    display: block;
-}
 
-.checkbox-input:focus+.checkbox-icon-on {
-    border-color: var(--primary-button-focus);
-}
+
+
