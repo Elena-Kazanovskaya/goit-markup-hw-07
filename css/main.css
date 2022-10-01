@@ -68,7 +68,7 @@ ul {
   padding-bottom: 94px;
 }
 
-.section-title {
+.section__title {
   margin-top: 0;
   margin-bottom: 50px;
   color: var(--primary-text-color);
@@ -120,8 +120,8 @@ ul {
   display: flex;
   margin-left: auto;
 }
-.contacts .link {
-  display: block;
+.contacts .contacts__link-social {
+  display: flex;
   padding-top: 32px;
   padding-bottom: 32px;
   color: var(--primary-text-color);
@@ -132,33 +132,27 @@ ul {
   text-decoration: none;
   transition: color var(--transition-duration-function);
 }
-.contacts .link.social {
+.contacts .contacts__link-social_theme_color {
+  display: flex;
+  align-items: center;
   color: var(--title-text-color);
 }
-.contacts .link.current {
-  color: var(--accent-color);
-}
-.contacts .link:focus, .contacts .link:hover {
+.contacts .contacts__link-social:focus, .contacts .contacts__link-social:hover {
   color: var(--accent-color);
   fill: var(--accent-color);
 }
-.contacts .item:not(:last-child) {
+.contacts .contacts__item:not(:last-child) {
   margin-right: 50px;
 }
 
-.icon-mail {
+.contacts__icon-mail {
   fill: currentColor;
   margin-right: 10px;
 }
 
-.icon-tel {
+.contacts__icon-tel {
   fill: currentColor;
   margin-right: 10px;
-}
-
-.link.social {
-  display: flex;
-  align-items: center;
 }
 
 .social-list {
@@ -167,8 +161,7 @@ ul {
   margin: 0;
   justify-content: center;
 }
-
-.social-link {
+.social-list .social-list__link {
   display: flex;
   width: 44px;
   height: 44px;
@@ -178,12 +171,11 @@ ul {
   fill: #AFB1B8;
   transition: background-color var(--transition-duration-function), fill var(--transition-duration-function);
 }
-.social-link:hover, .social-link:focus {
+.social-list .social-list__link:hover, .social-list .social-list__link:focus {
   background-color: var(--accent-color);
   fill: var(--primary-white-color);
 }
-
-.social:not(:last-child) {
+.social-list .social-list__social:not(:last-child) {
   margin-right: 10px;
 }
 
@@ -482,16 +474,6 @@ ul {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-.button.primary {
-  color: var(--primary-white-color);
-  background-color: var(--accent-color);
-  transition: background-color var(--transition-duration-function);
-}
-.button.primary:hover, .button.primary:focus {
-  color: var(--primary-white-color);
-  background-color: var(--primary-button-focus);
-}
-
 .button.secondary {
   padding-top: 6px;
   padding-right: 22px;
@@ -565,11 +547,6 @@ ul {
   background-color: var(--accent-color);
 }
 
-.contacts .link:focus,
-.contacts .link:hover {
-  color: var(--accent-color);
-}
-
 .hero {
   text-align: center;
   padding-top: 200px;
@@ -582,7 +559,7 @@ ul {
   background-color: var(--primary-bg-color);
 }
 
-.hero-title {
+.hero__title {
   margin-top: 0;
   margin-bottom: 30px;
   color: var(--primary-white-color);
@@ -593,14 +570,24 @@ ul {
   text-transform: uppercase;
 }
 
+.hero__button {
+  color: var(--primary-white-color);
+  background-color: var(--accent-color);
+  transition: background-color var(--transition-duration-function);
+}
+.hero__button:hover, .hero__button:focus {
+  color: var(--primary-white-color);
+  background-color: var(--primary-button-focus);
+}
+
 .features-list {
   display: flex;
   gap: 30px;
 }
-.features-list .item {
+.features-list .features-list__item {
   flex-basis: calc((100% - 90px) / 4);
 }
-.features-list .title {
+.features-list .features-list__title {
   margin-top: 0;
   margin-bottom: 10px;
   color: var(--primary-text-color);
@@ -610,15 +597,14 @@ ul {
   letter-spacing: 0.03em;
   text-transform: uppercase;
 }
-.features-list .text {
+.features-list .features-list__text {
   margin-top: 0;
   margin-bottom: 0;
   color: var(--title-text-color);
   font-size: 14px;
   line-height: 1.71;
 }
-
-.icon-features {
+.features-list .features-list__icon {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -632,19 +618,17 @@ ul {
   padding-top: 0;
 }
 
-.heading {
+.route {
   display: flex;
   gap: 30px;
 }
-
-.box {
+.route .route__box {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
-.label {
+.route .route__label {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -663,11 +647,6 @@ ul {
   background: rgba(47, 48, 58, 0.8);
 }
 
-.card {
-  margin-bottom: 0;
-  background-color: var(--primary-white-color);
-}
-
 .section-container {
   background-color: var(--button-color);
 }
@@ -676,8 +655,7 @@ ul {
   display: flex;
   gap: 30px;
 }
-.team-list .title {
-  margin-top: 30px;
+.team-list .team-list__title {
   margin-bottom: 10px;
   color: var(--primary-text-color);
   font-weight: 500;
@@ -685,30 +663,23 @@ ul {
   line-height: 1.19;
   text-align: center;
 }
-.team-list .text {
-  margin-bottom: 30px;
+.team-list .team-list__text {
+  margin-bottom: 16px;
   color: var(--title-text-color);
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
 }
-.team-list .card {
+.team-list .team-list__card {
+  margin-bottom: 0;
+  background-color: var(--primary-white-color);
   flex-basis: calc((100% - 90px) / 4);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
-
-.employees {
+.team-list .team-list__employees {
   padding-top: 30px;
   padding-bottom: 30px;
-}
-.employees .title {
-  margin-top: 0;
-  margin-bottom: 10px;
-}
-.employees .text {
-  margin-top: 0;
-  margin-bottom: 16px;
 }
 
 .client-list {
@@ -838,7 +809,7 @@ a:hover .text-overlay, a:focus .text-overlay {
   padding: 0;
   justify-content: space-between;
 }
-.footer .social-link {
+.footer .social-list__link {
   display: flex;
   width: 44px;
   height: 44px;
@@ -849,11 +820,11 @@ a:hover .text-overlay, a:focus .text-overlay {
   fill: #FFFFFF;
   transition: background-color var(--transition-duration-function);
 }
-.footer .social-icon {
+.footer .social-list__icon {
   display: flex;
 }
-.footer .social-link:hover,
-.footer .social-link:focus {
+.footer .social-list__link:hover,
+.footer .social-list__link:focus {
   background-color: var(--accent-color);
 }
 

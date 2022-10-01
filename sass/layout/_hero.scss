@@ -12,7 +12,7 @@
 
 }
 
-.hero-title {
+.hero__title {
     margin-top: 0;
     margin-bottom: 30px;
 
@@ -23,4 +23,17 @@
 
     letter-spacing: 0.06em;
     text-transform: uppercase;
+}
+
+.hero__button {
+    color: var(--primary-white-color);
+    background-color: var(--accent-color);
+
+    transition: background-color var(--transition-duration-function);
+
+    &:hover,
+    &:focus {
+        color: var(--primary-white-color);
+        background-color: var(--primary-button-focus);
+    }
 }
